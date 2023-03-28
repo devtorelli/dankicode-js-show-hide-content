@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            h2 {
+                display: inline;
+            }
+            span {
+                font-size: 12px;
+                margin-left: 25%;
+                cursor: pointer;                
+            }
+
+            .hide-text {
+                overflow: hidden;
+                height: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Título</h2><span>Ver mais</span>
+        <p class="hide-text">Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis</p>
+
+        <script>
+            var effect = document.querySelector('span');
+            effect.addEventListener('click', function() {
+                var content = document.querySelector('p');
+
+                if(content.classList.contains('hide-text')) {
+                    effect.innerHTML = 'Ver mais'
+                    content.classList.remove('hide-text')
+                }else {
+                    effect.innerHTML = 'Ocultar'
+                    content.classList.add('hide-text')
+                }
+            });
+        </script>
+    </body>    
+</html>
